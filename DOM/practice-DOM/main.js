@@ -23,7 +23,7 @@ let thirdListItem = document.querySelector("#container > ol > li.third");
 // 5
 
 
- containerSelector.textContent += "Hello";
+ containerSelector.innerText += "Hello";
 
 // 6
 
@@ -37,6 +37,17 @@ footer.classList.remove("main");
 console.log(footer);
 
 // 8
+
+ containerSelector.innerHTML += "<LI>new item</LI>";
+
+// 9
+
+ let newListItem = document.querySelector("#container > li");
+
+ newListItem.innerText = "four";
+
+// 10
+
 
 
 
