@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        html, body{
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    #navbar {
+        display: flex; 
+        width: 100%;
+        height: 20px;
+    
+    }
+    .movies {
+        width: 20%;
+       display: flex;
+       flex-direction: column;
+       align-content: center;
+    }
+    button {
+        border: none;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        background-color: #DD6E42;
+        color: white;
+        font-size: 20px;
+    }
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #DD6E42;
+        border-top: 2px solid white;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+      <div class="movies">
+          <button class="button-1">Lucy</button>
+          <div class="dropdown-1 dropdown">
+            <a>Scarlett Johansson</a>
+            <a>Morgan Freeman</a>
+            <a>Amr Waked</a>
+          </div>
+      </div>
+      <div class="movies">
+        <button class="button-2">I Origins</button>
+        <div class="dropdown-2 dropdown">
+          <a>Michael Pitt</a>
+          <a>Astrid Bergès-Frisbey</a>
+          <a>Brit Marling</a>
+        </div>
+    </div>
+    <div class="movies">
+        <button class="button-3">captain fantastic</button>
+        <div class="dropdown-3 dropdown">
+          <a>Viggo Mortensen</a>
+          <a>George MacKay</a>
+          <a>Annalise Basso</a>
+        </div>
+    </div>
+    <div class="movies">
+        <button class="button-4">Inception</button>
+        <div class="dropdown-4 dropdown">
+          <a>Leonardo DiCaprio</a>
+          <a>Joseph Gordon-Levitt</a>
+          <a>Ellen Page</a>
+        </div>
+    </div>
+    <div class="movies">
+        <button class="button-5">Gravity</button>
+        <div class="dropdown-5 dropdown">
+          <a>Sandra Bullock</a>
+          <a>George Clooney</a>
+          <a>Ed Harris</a>
+        </div>
+    </div>
+     
+    </div>
+
+<script>
+$('.dropdown').hide();    
+$('.button-1').on('click', () =>{
+    $('.dropdown-1').toggle('show');
+    $('.dropdown-2').hide();
+    $('.dropdown-3').hide();
+    $('.dropdown-4').hide();
+    $('.dropdown-5').hide();
+})
+$('.button-2').on('click', () =>{
+    $('.dropdown-2').toggle('show');
+    $('.dropdown-1').hide();
+    $('.dropdown-3').hide();
+    $('.dropdown-4').hide();
+    $('.dropdown-5').hide();
+})
+$('.button-3').on('click', () =>{
+    $('.dropdown-3').toggle('show');
+    $('.dropdown-1').hide();
+    $('.dropdown-2').hide();
+    $('.dropdown-4').hide();
+    $('.dropdown-5').hide();
+})
+$('.button-4').on('click', () =>{
+    $('.dropdown-4').toggle('show');
+    $('.dropdown-1').hide();
+    $('.dropdown-2').hide();
+    $('.dropdown-3').hide();
+    $('.dropdown-5').hide();
+})
+$('.button-5').on('click', () =>{
+    $('.dropdown-5').toggle('show');
+    $('.dropdown-1').hide();
+    $('.dropdown-2').hide();
+    $('.dropdown-3').hide();
+    $('.dropdown-4').hide();
+})
+</script>
+</body>
+</html>
