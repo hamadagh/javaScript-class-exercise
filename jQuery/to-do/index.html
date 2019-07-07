@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+    html, body {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+    }
+    .app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    ul {
+        display: inline;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+    li{
+        list-style-type: none;
+        width: 100%;
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h1>To do app</h1>
+        <input type="text">
+        <button class="add">Add To-do</button>
+        <ul>
+
+        </ul>
+    </div>
+
+<script>
+    $(document).ready(function(){
+        $(".add").click(function(e){
+            e.preventDefault();
+            $("ul").append(`<li>${$('input').val()}  <button class="remove">X</button></li>`); 
+        });
+        $(".remove").click(function(){
+            $(this).parent("li").remove();
+        });
+    });
+</script>
+</body>
+</html>
