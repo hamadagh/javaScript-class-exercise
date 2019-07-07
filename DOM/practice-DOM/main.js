@@ -23,7 +23,7 @@ let thirdListItem = document.querySelector("#container > ol > li.third");
 // 5
 
 
- containerSelector.innerText += "Hello";
+ containerSelector.innerHTML += "Hello";
 
 // 6
 
@@ -36,18 +36,25 @@ console.log(footer);
 footer.classList.remove("main");
 console.log(footer);
 
-// 8
+// 8, 9
 
- containerSelector.innerHTML += "<LI>new item</LI>";
+let newListItem = document.createElement("li");
+let text = document.createTextNode("four");
+newListItem.appendChild(text);
+// let newListItem = document.createElement("LI");
 
-// 9
-
- let newListItem = document.querySelector("#container > li");
-
- newListItem.innerText = "four";
+// let newListItemText = document.createTextNode("four");
+// newListItem.appendChild(newListItemText);
 
 // 10
+let unorderedList = document.getElementById("ul").appendChild(newListItem);
 
 
+// 11
+let orderedList = document.querySelector("ol");
+let listItem = orderedList.getElementsByTagName("li");
+for (let i = 0; i < listItem.length; i++){
+    listItem[i].style.backgroundColor = "green";
+}
 
 
